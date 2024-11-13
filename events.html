@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System - Events</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Management System - Events</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/guests">Guests</a></li>
+                <li><a href="/reservations">Reservations</a></li>
+                <li><a href="/rooms">Rooms</a></li>
+                <li><a href="/invoices">Invoices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="events">
+            <h2><i class="fas fa-calendar-alt"></i> Add Event</h2>
+            <form id="eventForm">
+                <input type="text" id="eventName" placeholder="Event Name" required>
+                <input type="date" id="eventDate" placeholder="Event Date" required>
+                <textarea id="eventDescription" placeholder="Event Description" required></textarea>
+                <button type="submit">Add Event</button>
+            </form>
+
+            <h3>Event List</h3>
+            <div id="eventList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hotel Management System | All Rights Reserved</p>
+    </footer>
+
+    <script src="./events.js"></script>
+</body>
+</html>

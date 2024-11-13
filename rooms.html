@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System - Rooms</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Management System - Rooms</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/guests">Guests</a></li>
+                <li><a href="/reservations">Reservations</a></li>
+                <li><a href="/rooms">Rooms</a></li>
+                <li><a href="/invoices">Invoices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="rooms">
+            <h2><i class="fas fa-bed"></i> Add Room</h2>
+            <form id="roomForm">
+                <input type="text" id="roomNumber" placeholder="Room Number" required>
+                <input type="text" id="roomType" placeholder="Room Type (e.g., Single, Double)" required>
+                <input type="number" id="roomPrice" placeholder="Price per Night" required>
+                <button type="submit">Add Room</button>
+            </form>
+
+            <h3>Room List</h3>
+            <div id="roomList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hotel Management System | All Rights Reserved</p>
+    </footer>
+
+    <script src="/public/js/main.js"></script>
+</body>
+</html>

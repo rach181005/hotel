@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - Hotel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Reservations</h1>
+    </header>
+
+    <main>
+        <section id="reservations">
+            <h2>Add Reservation</h2>
+            <form id="reservationForm">
+                <input type="number" id="reservationGuestId" placeholder="Guest ID" required>
+                <input type="number" id="roomId" placeholder="Room ID" required>
+                <input type="date" id="checkInDate" placeholder="Check-in Date" required>
+                <input type="date" id="checkOutDate" placeholder="Check-out Date" required>
+                <input type="number" id="bookingMoney" placeholder="Booking Amount" required>
+                <button type="submit">Add Reservation</button>
+            </form>
+            <h3>Reservation List</h3>
+            <div id="reservationList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hotel Management System | All Rights Reserved</p>
+    </footer>
+
+    <script src="reservations.js"></script>
+</body>
+</html>

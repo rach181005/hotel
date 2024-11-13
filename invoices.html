@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System - Invoices</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Management System - Invoices</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/guests">Guests</a></li>
+                <li><a href="/reservations">Reservations</a></li>
+                <li><a href="/rooms">Rooms</a></li>
+                <li><a href="/invoices">Invoices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="invoices">
+            <h2><i class="fas fa-file-invoice"></i> Generate Invoice</h2>
+            <form id="invoiceForm">
+                <input type="number" id="invoiceReservationId" placeholder="Reservation ID" required>
+                <input type="date" id="invoiceDate" placeholder="Invoice Date" required>
+                <input type="number" id="invoiceAmount" placeholder="Amount" required>
+                <button type="submit">Generate Invoice</button>
+            </form>
+
+            <h3>Invoice List</h3>
+            <div id="invoiceList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hotel Management System | All Rights Reserved</p>
+    </footer>
+
+    <script src="/public/js/main.js"></script>
+</body>
+</html>
