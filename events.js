@@ -1,27 +1,24 @@
+const express = require('express');
+const router = express.Router();
+const pool = require('../models/db');
 
-const eventForm = document.getElementById('eventForm');
-console.log("in the js file");
-
-eventForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const eventData = {
-        eventName: document.getElementById('eventName').value,
-        date: document.getElementById('eventDate').value, // 'date' instead of 'eventDate'
-        venue: document.getElementById('eventDescription').value // 'venue' instead of 'eventDescription'
-    };
-
-    fetch('http://localhost:3000/events', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(eventData),
-    })
-    .then(response => console.log(response)
-    )
-    .then(data => {
-        console.log(data); // Handle success
-    })
-    .catch(error => console.error('Error:', error));
+// GET route to fetch events
+router.get('/', (req, res) => {
+    const query = 'SELECT * FROM event';
+    pool.query(query, (err, results) => {
+        if (err) throw err;
+        res.render('index', { events: results });
+    });
 });
+
+// POST route to add new event
+router.post('/', (req, res) => {
+    const { eventName, date, venue } = req.body;
+    const query = 'INSERT INTO event (Event_Name, Date, Venue) VALUES (?, ?, ?)';
+    pool.query(query, [eventName, date, venue], (err, result) => {
+        if (err) throw err;
+        res.json({ message: 'Event added successfully' });
+    });
+});
+
+module.exports = router;
